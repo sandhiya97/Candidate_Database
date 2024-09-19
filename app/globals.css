@@ -1,27 +1,83 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* Global Styling for the Entire Application */
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply bg-gray-100 text-gray-800 font-sans;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+h1, h2, h3, h4, h5, h6 {
+  @apply font-bold text-gray-900;
+}
+
+/* Button Styles */
+.btn-primary {
+  @apply bg-blue-500 text-white font-semibold py-2 px-4 rounded-lg shadow-md transition-all duration-300 ease-in-out;
+}
+
+.btn-primary:hover {
+  @apply bg-blue-600;
+}
+
+.btn-secondary {
+  @apply bg-gray-500 text-white font-semibold py-2 px-4 rounded-lg shadow-md transition-all duration-300 ease-in-out;
+}
+
+.btn-secondary:hover {
+  @apply bg-gray-600;
+}
+
+/* Form Input Styles */
+input, select, textarea {
+  @apply border border-gray-300 rounded-lg py-2 px-3 w-full mb-4 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent;
+}
+
+/* Styling for Tables */
+.table {
+  @apply w-full text-left table-auto border-collapse;
+}
+
+.table th, .table td {
+  @apply border-b border-gray-200 py-3 px-4;
+}
+
+.table th {
+  @apply bg-gray-100 font-semibold;
+}
+
+.table-row:hover {
+  @apply bg-gray-50;
+}
+
+/* Card Component */
+.card {
+  @apply bg-white rounded-lg shadow-lg p-6 mb-6;
+}
+
+/* Container and Spacing */
+.container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+
+
+/* Footer Styling */
+.footer {
+  @apply text-center py-6 bg-gray-200;
+}
+
+/* Admin Button Style */
+.btn-admin {
+  @apply bg-green-500 text-white font-bold py-2 px-6 rounded-lg shadow-lg hover:bg-green-600 transition-all duration-300 ease-in-out;
+}
+
+/* Recruiter Button Style */
+.btn-recruiter {
+  @apply bg-purple-500 text-white font-bold py-2 px-6 rounded-lg shadow-lg hover:bg-purple-600 transition-all duration-300 ease-in-out;
+}
+
+/* Common Button Style */
+.btn {
+  @apply text-white font-semibold py-2 px-4 rounded-md shadow-md transition-all duration-300 ease-in-out;
+}
+
+.btn:hover {
+  @apply opacity-90;
 }
